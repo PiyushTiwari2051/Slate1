@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* DARK THEME (Cyber Midnight Indigo) - Default */
+  --bg-primary: #08090D;          /* Cyber Blue-Black */
+  --bg-secondary: #0F111A;        /* Deep navy slate card backgrounds */
+  --bg-tertiary: #171B26;         /* Steel slate surfaces */
+  --bg-glass: rgba(99, 102, 241, 0.04); /* Indigo glassmorphism */
+  
+  --accent-amber: #6366F1;        /* PRIMARY accent — royal indigo */
+  --accent-amber-glow: rgba(99, 102, 241, 0.15);
+  --accent-green: #10B981;        /* Success / Completed — Emerald */
+  --accent-blue: #06B6D4;         /* Info / In-Progress — Neon Cyan */
+  --accent-red: #EF4444;          /* Danger / High Priority — Crimson */
+  --accent-purple: #D946EF;       /* Secondary actions — Bright Magenta */
+
+  --text-primary: #F1F5F9;        /* Ice white headings */
+  --text-secondary: #94A3B8;      /* Slate body text */
+  --text-muted: #475569;          /* Slate labels, metadata */
+
+  --border-subtle: rgba(99, 102, 241, 0.08);
+  --border-accent: rgba(99, 102, 241, 0.3);
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow-amber: 0 0 40px rgba(99, 102, 241, 0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --font-display: 'Syne', sans-serif;       /* Bold headings */
+  --font-body: 'DM Sans', sans-serif;       /* Body text */
+  --font-mono: 'JetBrains Mono', monospace; /* Code, OTP fields */
+}
+
+:root.light {
+  /* LIGHT THEME (Organic Sage Alabaster Paper) */
+  --bg-primary: #F4F6F2;          /* Warm sage-cream paper base */
+  --bg-secondary: #FFFFFF;        /* Crisp alabaster white card backgrounds */
+  --bg-tertiary: #E9EBE5;         /* Sage gray-green surfaces */
+  --bg-glass: rgba(15, 118, 110, 0.03); /* Teal glassmorphism */
+  
+  --accent-amber: #0F766E;        /* Primary accent — Deep Spruce Teal */
+  --accent-amber-glow: rgba(15, 118, 110, 0.12);
+  --accent-green: #15803D;        /* Completed — Forest Green */
+  --accent-blue: #1D4ED8;         /* In-Progress — Royal Blue */
+  --accent-red: #B91C1C;          /* High Priority — Deep Cherry Red */
+  --accent-purple: #701A75;       /* Secondary actions — Deep Plum */
+
+  --text-primary: #1E2D24;        /* Deep spruce green headings */
+  --text-secondary: #3E4D43;      /* Warm botanical charcoal body text */
+  --text-muted: #758A7E;          /* Sage muted labels */
+
+  --border-subtle: rgba(15, 118, 110, 0.08);
+  --border-accent: rgba(15, 118, 110, 0.25);
+
+  --shadow-card: 0 8px 30px -10px rgba(27, 46, 36, 0.08);
+  --shadow-glow-amber: 0 0 35px rgba(15, 118, 110, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.15s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Base utility layers */
+.premium-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.premium-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.glow-amber-focus:focus-within {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 12px var(--accent-amber-glow);
+}

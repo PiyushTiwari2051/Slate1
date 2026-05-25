@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production builds
+dist/
+client/dist/
+build/
+
+# Environment variables
+.env
+server/.env
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+*.log
+.system_generated/
+.gemini/
+antigravity/
