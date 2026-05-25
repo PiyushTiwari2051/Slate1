@@ -10,7 +10,10 @@ build/
 
 # Environment variables
 .env
+.env.*
+*.pull
 server/.env
+server/.env.vercel.pull
 
 # IDE and system files
 .vscode/
@@ -20,3 +23,7 @@ server/.env
 .system_generated/
 .gemini/
 antigravity/
+.vercel/
+client/.vercel/
+server/.vercel/
+
