@@ -6,8 +6,9 @@ TaskFlow is a production-grade, security-hardened, and keyboard-optimized task m
 
 ## 🚀 Live Deployments
 
-- **Live Client Application**: [https://client-bice-beta.vercel.app](https://client-bice-beta.vercel.app)
+- **Live Client Application**: [https://slate-taskflow.vercel.app](https://slate-taskflow.vercel.app)
 - **Production API Server**: [https://server-chi-eosin-57.vercel.app](https://server-chi-eosin-57.vercel.app)
+
 
 ---
 
